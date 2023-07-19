@@ -9,13 +9,17 @@
 }
 .navLeft{
     /* border:1px solid black; */
-    width:25%;
+    width:35%;
     display:flex;
     justify-content: center;
     align-items: center;
 }
+.linkfocus:hover{
+  color:rgb(204, 105, 121);
+  -ms-zoom-animation: var(--green);
+}
 .navLeft>img{
-    width:90%;
+    width:100%;
     height:100%;
     /* border:1px solid red; */
 }
