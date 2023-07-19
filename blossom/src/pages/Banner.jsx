@@ -1,6 +1,6 @@
 import React from 'react'
 import Styles from "../styles/Banner.module.css"
-import Signup from '../signup/Signup'
+import { Link } from 'react-router-dom'
 
 const Banner = () => {
   return (
@@ -17,7 +17,7 @@ const Banner = () => {
                 language enthusiasts from around the globe, engage in dynamic discussions, and hone your skills through 
                 engaging exercises and multimedia resources. Blossom is your gateway to fluency, where you'll blossom into
                  a confident communicator and embrace the beauty of diverse languages. Start your language learning odyssey with us today!</p>
-           <button className={Styles.bannersignupbutton}><span>Sign Up</span></button>
+           <Link to="/signup"><button className={Styles.bannersignupbutton}><span>Sign Up</span></button></Link>
         </div>
         <div className={Styles.rightBanner}>
           <img key="image" src="https://yourimageshare.com/ib/86uP8uuTli.webp" alt="banner" />

@@ -1,16 +1,13 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
-import Banner from './Banner'
-import SectionA from './SectionA'
-import SectionB from './SectionB'
+import Allroutes from '../AllRoutes/Allroutes'
 
 const Home = () => {
   return (
     <div>
         <Navbar/>
-        <Banner/>
-        <SectionA/>
-        <SectionB/>
+        <Allroutes/>
+        
     </div>
   )
 }
