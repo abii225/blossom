@@ -1,4 +1,4 @@
-import React, { useContext, useReducer } from 'react'
+import React, { useContext, useReducer, useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios';
 import { useEffect } from 'react';
@@ -32,7 +32,7 @@ const SingleProduct = () => {
     const initState={
          loading:false,
          data:{},
-         error:""
+         error:"",
     }
 
     const [state,dispatch]=useReducer(reducer,initState);
@@ -51,12 +51,20 @@ const SingleProduct = () => {
       });
 
  }
+const [arr,setArr]=useState([]);
+
  useEffect(()=>{
     fetchSingleData(id);
  },[id]);
 
- useEffect(()=>{console.log(state)},[state]);
-
+ useEffect(()=>{
+    console.log(state)
+   let size=new Array(state.data.rating).fill(0)
+   setArr(size);
+},[state]);
+useEffect(()=>{
+    // console.log(arr);
+},[arr]);
 
 //  ===========================================================
 //   autcontext passing to dispatch
@@ -82,7 +90,11 @@ const buyProduct=()=>{
         <div className={Styles.left}>
         <table>
         <tr><h1>{state.data.title}</h1></tr>
-        <tr><h1>Rating:{state.data.rating}<em>Stars</em></h1></tr>
+        <tr><h1 style={{display:"inline"}}>Rating:</h1>
+            {arr.map((ele)=>(
+                <img src="https://yourimageshare.com/ib/2FjwnaTHmS.webp" width="30" alt="" />
+            ))}
+    </tr>
     </table>
         </div>
    <div className={Styles.right}><img src={state.data.images} alt="" />
@@ -97,6 +109,11 @@ const buyProduct=()=>{
         ))
     }
    </table>
+   <div className={Styles.desc}>
+    <h3>Description</h3>
+   <p>{state.data.description}</p>
+   </div>
+   
     </div>
   )
 }

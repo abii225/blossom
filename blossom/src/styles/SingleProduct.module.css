@@ -73,3 +73,12 @@
     margin-left:10%;
     margin-top:20px;
   }
+
+  .desc{
+    width:50%;
+    margin-left:10%;
+  }
+  .desc>h3{
+    text-decoration: underline;
+    word-wrap: break-word;
+  }
