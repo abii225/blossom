@@ -29,7 +29,7 @@ const AuthProvider = ({children}) => {
 
   return (
     <div>
-   <Authcontext.Provider value={{name,dispatchReducer}}>
+   <Authcontext.Provider value={{allData,dispatchReducer}}>
     {children}
    </Authcontext.Provider>
     </div>
