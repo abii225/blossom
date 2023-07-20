@@ -7,7 +7,9 @@ import { useEffect } from 'react';
 import SingleCard from './SingleCard';
 
 const Shop = () => {
-
+// vimeo player check
+// <iframe src="https://player.vimeo.com/video/50193444?h=663a04d54f" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+// <p><a href="https://vimeo.com/50193444">Learn French - How to Introduce Yourself in French</a> from <a href="https://vimeo.com/innovativelanguage">Innovative Language Learning</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 const [load,setLoad]=useState(false);
 const [data,setData]=useState([]);

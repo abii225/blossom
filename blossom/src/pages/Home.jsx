@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import Allroutes from '../AllRoutes/Allroutes'
 
 const Home = () => {
+  
   return (
     <div>
         <Navbar/>

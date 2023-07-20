@@ -1,11 +1,12 @@
 import React from 'react'
 import Styles from "../styles/SingleCard.module.css"
+import { Link } from 'react-router-dom';
 
 const SingleCard = (props) => {
     let data={...props.data};
   return (
     <div id={Styles.card}>
-        <div className={Styles.image}><img src="" alt="" /></div>
+        <div className={Styles.image}><img src={data.images[0]} alt="" /></div>
    <table className={Styles.table}>
    <tr>
     <td>Title :</td><td>{data.title}</td>
@@ -14,12 +15,12 @@ const SingleCard = (props) => {
     <td>Language:</td><td>{data.name}</td>
    </tr>
    <tr>
-    <td>Contents:</td><td>{data.content}</td>
+    <td>Contents:</td><td>{data.content}</td><td>Rating: {data.rating}</td>
    </tr>
    <tr>
     <td>Price:</td>
-    <td>44</td>
-    <td>View</td>
+    <td>{data.price}</td>
+    <td><Link to={`/shop/singleproduct/${data.id}`}>View</Link></td>
    </tr>
    </table>
 
