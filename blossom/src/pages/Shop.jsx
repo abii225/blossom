@@ -41,14 +41,14 @@ useEffect(()=>{
 useEffect(()=>{console.log(data,language)},[data,language,load]);
 
 const filterByLanguage=(e)=>{
-  console.log(e.target.textContent);
+  // console.log(e.target.textContent);
   setLoad(true);
   // https://blossomdatas.onrender.com/language?name=French
   axios.get(`https://blossomdatas.onrender.com/language?name=${e.target.textContent}`)
   .then(function (response) {
     // console.log(response);
     // console.log(response.data)
-      console.log(response.data)
+      // console.log(response.data)
       setData(response.data);
       setLoad(false);
   })
@@ -60,6 +60,8 @@ const filterByLanguage=(e)=>{
   return (
     <>
     <div>
+    <h1>Shop your Language</h1>
+   <hr width="80%"/>
     <div className={Styles.search}>
     <div className={Styles.inputgroup}>
     <input type="email" className={Styles.input} id={Styles.Email} name="Email" placeholder="Search here" autocomplete="off"/>

@@ -42,6 +42,15 @@
     height:40px;
     padding:5px;
     /* border:1px solid blue; */
+    position: relative;
+    z-index: 0;
+}
+#total{
+  color:green;
+  text-decoration: none;
+  border:1px solid red;
+  position: absolute;
+  z-index: 1;
 }
 .button {
     --green: #1BFD9C;
@@ -128,3 +137,6 @@
   .register:active {
     transform: scale(0.95);
   }
+
+
+  
