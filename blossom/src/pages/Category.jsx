@@ -2,7 +2,7 @@ import React from 'react'
 
 const Category = (props) => {
   let data=[...props.data];
-console.log(props.fltrLanguage)
+// console.log(props.fltrLanguage)
   return (
     <div>
       <ul>Rating

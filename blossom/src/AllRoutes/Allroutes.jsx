@@ -10,6 +10,8 @@ import About from "../pages/About";
 import Cart from "../pages/Cart";
 import Main from "../pages/Main";
 import SingleProduct from '../pages/SingleProduct';
+import Checkout from "../pages/Checkout";
+
 const Allroutes = () => {
   return (
     <>
@@ -19,6 +21,7 @@ const Allroutes = () => {
         <Route path="/signup" element={<Signup/>} />
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/shop/singleproduct/:id" element={<SingleProduct/>}></Route>
+        <Route path="/shop/singleproduct/checkout/:id" element={<Checkout/>}></Route>
     {/* //pages */}
         <Route path="/learn" element={<Learn/>}></Route>
         <Route path="/mentors" element={<Mentors/>}></Route>

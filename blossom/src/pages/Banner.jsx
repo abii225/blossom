@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Styles from "../styles/Banner.module.css"
 import { Link } from 'react-router-dom'
+import { Authcontext } from '../ContextProvider/AuthProvider'
 
 const Banner = () => {
+  const {login}=useContext(Authcontext);
   return (
     <div id={Styles.banner}>
         <div className={Styles.leftBanner}>
@@ -17,7 +19,9 @@ const Banner = () => {
                 language enthusiasts from around the globe, engage in dynamic discussions, and hone your skills through 
                 engaging exercises and multimedia resources. Blossom is your gateway to fluency, where you'll blossom into
                  a confident communicator and embrace the beauty of diverse languages. Start your language learning odyssey with us today!</p>
-           <Link to="/signup"><button className={Styles.bannersignupbutton}><span>Sign Up</span></button></Link>
+          {
+            !login&&<Link to="/signup"><button className={Styles.bannersignupbutton}><span>Sign Up</span></button></Link>
+          } 
         </div>
         <div className={Styles.rightBanner}>
           <img key="image" src="https://yourimageshare.com/ib/86uP8uuTli.webp" alt="banner" />

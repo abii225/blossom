@@ -27,7 +27,7 @@ const reducer=(state,action)=>{
 
 const SingleProduct = () => {
     const {id}=useParams();
-    console.log(id,"from singleproduct");
+    // console.log(id,"from singleproduct");
    
     const initState={
          loading:false,
@@ -42,7 +42,7 @@ const SingleProduct = () => {
     axios.get(`https://blossomdatas.onrender.com/language/${id}`)
       
       .then(function (response) {
-        console.log(response,"from single user");
+        // console.log(response,"from single user");
         dispatch({type:"success",payload:response.data});
       })
       .catch(function (error) {
@@ -55,10 +55,10 @@ const [arr,setArr]=useState([]);
 
  useEffect(()=>{
     fetchSingleData(id);
- },[id]);
+ },[]);
 
  useEffect(()=>{
-    console.log(state)
+    // console.log(state)
    let size=new Array(state.data.rating).fill(0)
    setArr(size);
 },[state]);
