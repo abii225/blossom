@@ -15,10 +15,11 @@ const Cart = () => {
 //  console.log(allData,"--==--==---===-==----===---====---====-==-")
   return (
    <div>
-    <h1>Shopping Cart</h1>
-   <h3>Total:</h3>
+    <h1 style={{fontSize:"30px",textAlign:"center",color:"black"}}>Shopping Cart</h1>
    <hr width="80%"/>
-   <div id={Styles.cart}>
+   {
+       allData.data.length===0&&<h1 style={{fontSize:"50px",textAlign:"center",color:"white"}}>Cart is empty</h1>||
+       <div id={Styles.cart}>
       {
         allData.data?.map((ele)=>(
           
@@ -34,6 +35,8 @@ const Cart = () => {
         ))
       }
     </div>
+   }
+   
 
    </div>
   )

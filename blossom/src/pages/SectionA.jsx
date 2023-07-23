@@ -31,7 +31,7 @@ const SectionA = () => {
             <div key={item.id}>
               <img src={item.image} alt="card" />
               <h3>{item.title}</h3>
-              <button>{item.btntext}</button>
+              {/* <button>{item.btntext}</button> */}
             </div>
         ))
     }

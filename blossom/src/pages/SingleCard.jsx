@@ -20,7 +20,12 @@ const SingleCard = (props) => {
    <tr>
     <td>Price:</td>
     <td>{data.price}</td>
-    <td><Link to={`/shop/singleproduct/${data.id}`}>View</Link></td>
+   {
+    props.subscribed&& <td><Link to={`/course/${data.name}`}>View Content</Link></td>||
+    <td><Link to={`/shop/singleproduct/${data.id}`}><button className={Styles.reset} >View</button></Link></td>
+    
+   }
+   
    </tr>
    </table>
 

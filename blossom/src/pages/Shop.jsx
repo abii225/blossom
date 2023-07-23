@@ -5,6 +5,7 @@ import { useState } from 'react'
 import axios from "axios";
 import { useEffect } from 'react';
 import SingleCard from './SingleCard';
+import Footer from './Footer';
 
 const Shop = () => {
 // vimeo player check
@@ -60,7 +61,7 @@ const filterByLanguage=(e)=>{
   return (
     <>
     <div>
-    <h1>Shop your Language</h1>
+    <h1 style={{textAlign:"center"}}>Shop your Language</h1>
    <hr width="80%"/>
     <div className={Styles.search}>
     <div className={Styles.inputgroup}>
@@ -72,7 +73,7 @@ const filterByLanguage=(e)=>{
    <div className={Styles.parent}>
     <div className={Styles.leftcategory}>
       <Category key="category" data={language} fltrLanguage={filterByLanguage}/>
-      <button onClick={()=>fetchData()}>Reset</button>
+      <button className={Styles.reset} onClick={()=>fetchData()}>Reset</button>
     </div>
     <div className={Styles.rightCard}>
       
@@ -88,7 +89,6 @@ const filterByLanguage=(e)=>{
     
     </div>
    </div>
-
     </div>
     </>)
 

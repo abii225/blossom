@@ -1,0 +1,13 @@
+.hover:hover{
+    cursor: pointer;
+}
+.hover{
+    font-size: 20px;;
+    padding:10px;
+    margin-left: 30px;;
+    font-family: 'Poppins', sans-serif;
+}
+
+.frame{
+    font-family: 'Poppins', sans-serif;
+}

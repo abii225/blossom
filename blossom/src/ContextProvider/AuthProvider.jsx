@@ -26,14 +26,17 @@ const reducermain=(allData,action)=>{
      }
    }
    case "done":{
-     
-       console.log(allData,"signup Data success"); //here i should make the entire app working
+    //  here in done case 201 error gets beacuse of same data found , so we retrieve the data with username and password already there
+       console.log(allData,"signup Data success"); //here i should make the entire app working by
         axios.get(`https://blossomdatas.onrender.com/users?username=${allData.username}&email=${allData.email}`)
         .then((response)=>{
           console.log(response,"\n",allData,"getting data")
           setLogin(true);
         })
-        .catch(err=>console.log(err,"this error in getting data"))
+        .catch((err)=>{
+          console.log(err,"this error in getting data")
+          alert("wrong credentials")
+        })
         return  //here the entire app gets log,so accordingly we can update user isloggedin? using another reducer.
      }
      case "subscribe":{ //from checkout page &&not taking the allData ,instead single data is putting from checkout post Data.

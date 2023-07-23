@@ -84,8 +84,10 @@ const buyProduct=()=>{
 
 
   return (
+    <>
     <div>
-        { state.loading&&<h1>loadingg...........</h1>}
+        { state.loading&&<div className={Styles.loader}>Loading<span></span></div>||
+       
     <div id={Styles.main}>
         <div className={Styles.left}>
         <table>
@@ -97,10 +99,13 @@ const buyProduct=()=>{
     </tr>
     </table>
         </div>
+    
    <div className={Styles.right}><img src={state.data.images} alt="" />
    <button className={Styles.button} onClick={buyProduct}>Buy this Course</button>
    </div>
     </div>
+   } 
+    { !state.loading&&
    <table className={Styles.table}>
     <ul>What you will learn</ul>
     {
@@ -109,13 +114,15 @@ const buyProduct=()=>{
         ))
     }
    </table>
+}
+   { !state.loading&&
    <div className={Styles.desc}>
     <h3>Description</h3>
    <p>{state.data.description}</p>
-   </div>
+   </div>}
    
     </div>
-  )
+    </> )
 }
 
 export default SingleProduct

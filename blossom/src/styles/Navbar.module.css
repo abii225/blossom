@@ -15,7 +15,7 @@
     align-items: center;
 }
 .linkfocus:hover{
-  color:rgb(204, 105, 121);
+  color:darkgreen;
   -ms-zoom-animation: var(--green);
 }
 .navLeft>img{
@@ -45,6 +45,17 @@
     position: relative;
     z-index: 0;
 }
+.title{
+  color:white;
+  font-size: 20px;;
+}
+
+.title:hover{
+  color:#1BFD9C;
+}
+
+
+
 #total{
   color:green;
   text-decoration: none;
