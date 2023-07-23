@@ -22,6 +22,8 @@ input :focus{
     height: 500px;
     padding: 20px;
     width: 320px;
+    /* border:1px solid red; */
+    margin:auto;
   }
   
   .title {

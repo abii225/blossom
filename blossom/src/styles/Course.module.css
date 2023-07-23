@@ -1,0 +1,20 @@
+
+#main{
+    width:80%;
+    /* border:1px solid red; */
+    padding:20px;
+    margin:auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    background-color:white;
+}
+.left{
+    border:1px solid green;
+    background-color: #38336c;
+}
+
+.desc{
+    /* border:1px solid green; */
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}

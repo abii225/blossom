@@ -1,0 +1,17 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Make sure the body takes up full viewport height */
+    width: 100%; /* Make sure the body takes up full viewport width */
+    background-image: url('https://img.freepik.com/free-photo/workspace-workplace-office-table_144627-40147.jpg?w=1060&t=st=1690127749~exp=1690128349~hmac=83ac8d77139906d3324cb3fae902d06f4cfd7002bfc880c6e4fe86f54767f7e7');
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color:rgb(210,217,223);
+    background-color: rgb(206, 212, 222);
+  }
+  #Home{
+   /* height:110em; */
+  }

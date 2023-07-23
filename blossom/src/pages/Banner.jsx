@@ -24,7 +24,7 @@ const Banner = () => {
           } 
         </div>
         <div className={Styles.rightBanner}>
-          <img key="image" src="https://yourimageshare.com/ib/86uP8uuTli.webp" alt="banner" />
+          {/* <img key="image" src="https://yourimageshare.com/ib/86uP8uuTli.webp" alt="banner" /> */}
         </div>
 
     </div>

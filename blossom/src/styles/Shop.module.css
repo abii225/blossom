@@ -4,12 +4,14 @@
     /* border:1px solid red; */
     margin:auto;
     margin-top:40px;
+    background-color:white;
 }
 
 
 .inputgroup {
     display: flex;
     align-items: center;
+    /* background-color:white; */
   }
   
   .input {
@@ -49,23 +51,28 @@
   .parent{
     width:90%;
     height:500px;
-    border:1px solid red;
+    /* border:1px solid red; */
     margin:auto;
     margin-top:40px;
     display:grid;
     grid-template-columns: repeat(3,1fr);
+    gap:50px;
   }
   .leftcategory{
-    border:1px solid black;
+    /* border:1px solid black; */
+    height:700px;
     grid-column-start: 0;
     grid-column-end: 2;
-    background-color: red;;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* background-color: red;; */
   }
   .rightCard{
-    border:1px solid rgb(14, 27, 109);
+    /* border:1px solid rgb(14, 27, 109); */
     grid-column: span 2;
     /* background-color: #38336c; */
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   /* //loaders */
@@ -81,7 +88,7 @@
     border-radius: 50%;
     text-align: center;
     line-height: 150px;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color: #0066ff;
     letter-spacing: 2px;
@@ -146,4 +153,29 @@
     100% {
       transform: rotate(405deg);
     }
+  }
+  /* ///////////////////////////////////////////////////////////// */
+  .reset {
+    width: fit-content;
+    min-width: 100px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2.5px solid #E0E1E4;
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.2s ease-in-out 0ms;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 30px;;
+  }
+  
+  .reset:hover {
+    background-color: #F2F2F2;
+    box-shadow: 0px 0px 20px -18px;
+  }
+  
+  .reset:active {
+    transform: scale(0.95);
   }

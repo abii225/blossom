@@ -2,12 +2,13 @@ import React, {  useContext, useEffect, useReducer } from 'react'
 import Styles from "../styles/Signup.module.css"
 import axios from 'axios';
 import { Authcontext } from '../ContextProvider/AuthProvider';
+import { Navigate } from 'react-router-dom';
 
 
 
 const Signup = () => {
 
-   const {allData,dispatchReducer}=useContext(Authcontext);
+   const {allData,dispatchReducer,setLogin,login}=useContext(Authcontext);
 
    
 const reducer=(state,action)=>{
@@ -29,8 +30,10 @@ const reducer=(state,action)=>{
         console.log(response.status)
        if(response.status===201){
          dispatchReducer("success",state);
+         
        }
        dispatchReducer("done",null)
+       setLogin(true);
       })
       .catch(err=>console.log(err));
       // console.log(res);
@@ -55,7 +58,7 @@ const reducer=(state,action)=>{
 
   return (
     <>
-   <div className={Styles.form}>
+   {!login&&<div className={Styles.form}>
       <div className={Styles.title}>Welcome</div>
       <div className={Styles.subtitle}>Let's create your account!</div>
 
@@ -81,7 +84,9 @@ const reducer=(state,action)=>{
       <button className={Styles.submit} type="text" onClick={(e)=>{
         e.preventDefault();
         dispatch({type:"submit"})}}>submit</button>
-    </div>
+    </div>||
+    <Navigate to="/"/>
+    }
     </>
   )
 }

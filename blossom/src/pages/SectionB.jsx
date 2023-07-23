@@ -8,8 +8,10 @@ import Styles from "../styles/SectionB.module.css"
 
 const SectionB = () => {
   return (<>
-  <div className={Styles.main} style={{marginTop:"70px"}}>
+  <div  style={{marginTop:"70px"}}>
+    <div className={Styles.main}>
    <h2 style={{textAlign:"center"}}>Why study with <span style={{color:"red"}}>Blossom</span>?</h2>
+   </div>
       <div id={Styles.sectionB}>
       {
         sectionBcard?.map((item)=>(
